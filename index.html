@@ -5,111 +5,51 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Poppins,sans-serif;background:#081529;color:#fff;overflow-x:hidden}
-section{min-height:100vh;display:none;flex-direction:column;justify-content:center;align-items:center;padding:30px;text-align:center}
-#loading{display:flex}
+body{font-family:Poppins,sans-serif;background:#081529;color:#fff}
+section{min-height:100vh;display:none;flex-direction:column;justify-content:center;align-items:center;padding:40px;text-align:center}
+#loading{display:flex;background:linear-gradient(180deg,#081529,#163f73)}
 h1{font-family:'Playfair Display',serif;font-size:48px}
 .loader{width:46px;height:46px;border:5px solid #ffffff40;border-top:5px solid #fff;border-radius:50%;animation:spin 1s linear infinite;margin-top:20px}
 @keyframes spin{to{transform:rotate(360deg)}}
 input{padding:14px;font-size:24px;border-radius:12px;border:none;text-align:center;width:160px;margin:20px}
 button{padding:12px 26px;border:none;border-radius:25px;background:#6faeff;color:#fff;font-size:18px;cursor:pointer}
+#pin{background:linear-gradient(180deg,#10284a,#1d5fa5)}
+#giftPage{background:linear-gradient(135deg,#fff7e8,#ffe4b5);color:#5a3a00}
 #gift{font-size:120px;cursor:pointer;animation:f 2s infinite}
 @keyframes f{50%{transform:translateY(-12px)}}
-.light{background:#fff;color:#203050}
+#birthday{background:linear-gradient(180deg,#f7fbff,#dceeff);color:#203050}
 #typing{max-width:700px;font-size:21px;line-height:1.8}
-.gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:30px}
-.gallery img{width:220px;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.2)}
+#gallery{background:linear-gradient(180deg,#fff,#eef7ff);color:#203050}
+.gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-top:30px}
+.pol{width:230px}
+.gallery img{width:100%;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.2)}
+.small{font-size:14px;margin-top:8px}
+#flowers{background:linear-gradient(180deg,#fff7fb,#ffeef7);color:#203050}
 .flower{font-size:70px;cursor:pointer;margin:10px}
+#cardPage{background:linear-gradient(180deg,#eef4ff,#d6e8ff);color:#203050}
 .card{background:linear-gradient(135deg,#4f7fff,#77b9ff);padding:25px;border-radius:22px;color:#fff;width:300px}
-</style></head>
-<body>
-
+#gift2{background:linear-gradient(180deg,#fff8ef,#ffe9cf);color:#203050}
+#ending{background:linear-gradient(180deg,#071426,#0b2445)}
+</style></head><body>
 <section id="loading"><h1>Preparing something special...</h1><div class="loader"></div></section>
-
-<section id="pin">
-<h1>Enter Our Secret Love Code</h1>
-<p>Hint: Your birthday and mine ❤️</p>
-<input id="code" maxlength="4" type="password">
-<button onclick="checkPin()">Continue</button>
-<p id="err"></p>
-</section>
-
-<section id="giftPage" class="light">
-<div id="gift">🎁</div>
-<h2>Tap your gift</h2>
-</section>
-
-<section id="birthday" class="light">
-<h1>Happy Birthday</h1>
-<h2>Kameron ❤️</h2>
-<p id="typing"></p>
-<button onclick="next('gallery')">Continue</button>
-</section>
-
-<section id="gallery" class="light">
-<h1>Our Memories ❤️</h1>
-<p>Replace these files with your own photos.</p>
-<div class="gallery">
-<img src="assets/photo1.jpg"><img src="assets/photo2.jpg"><img src="assets/photo3.jpg"><img src="assets/photo4.jpg"><img src="assets/photo5.jpg">
-</div>
-<button onclick="next('flowers')">Next</button>
-</section>
-
-<section id="flowers" class="light">
-<h1>My First Gift For You 🌸</h1>
-<div class="flower" onclick="alert('I hope this year brings you happiness, good health, and exciting adventures. ❤️')">🌼</div>
-<div class="flower" onclick="alert('Thank you for loving me and always making me smile. ❤️')">🌷</div>
-<div class="flower" onclick="alert('I can\'t wait until we celebrate together in Indonesia. ❤️')">🌹</div>
-<button onclick="next('cardPage')">Next</button>
-</section>
-
-<section id="cardPage" class="light">
-<h1>Your Digimon Inspired Partner Card</h1>
-<div class="card">
-<h2>KAMERON</h2>
-<p>Legendary Partner ★★★★★</p><hr>
-<p>Kindness +999</p>
-<p>Patience +999</p>
-<p>Support +999</p>
-<p>Love ∞</p>
-<p><b>Special Skill:</b><br>Always Makes Astrid Smile ❤️</p>
-</div>
-<button onclick="next('gift2')">Next</button>
-</section>
-
-<section id="gift2" class="light">
-<h1>Second Gift 🎁</h1>
-<p>Your real gift isn't inside this website.</p>
-<p>I'll give it to you when you come to Indonesia. ❤️</p>
-<button onclick="next('ending')">Finish</button>
-</section>
-
-<section id="ending">
-<h1>Happy Birthday Kameron ❤️</h1>
-<p>Thank you for reading everything.</p>
-<p>Now tell Astrid you've finished read it.</p>
-<p>She has one more surprise waiting for you</p>
-</section>
-
+<section id="pin"><h1>Enter Our Secret Love Code</h1><p>Hint: Your birthday and mine ❤️</p><input id="code" maxlength="4" type="password"><button onclick="checkPin()">Continue</button><p id="err"></p></section>
+<section id="giftPage"><div id="gift">🎁</div><h2>Tap your gift</h2><p>Your surprise is waiting inside.</p></section>
+<section id="birthday"><h1>Happy Birthday</h1><h2>Kameron ❤️</h2><p id="typing"></p><button onclick="next('gallery')">Continue</button></section>
+<section id="gallery"><h1>Our Memories ❤️</h1><div class="gallery">
+<div class="pol"><img src="assets/photo1.jpg"><p class="small">The beginning of countless video calls. I still remember how excited I was every time your name appeared on my screen.</p></div>
+<div class="pol"><img src="assets/photo2.jpg"><p class="small">One smile from you could instantly make my whole day better, even from thousands of miles away.</p></div>
+<div class="pol"><img src="assets/photo3.jpg"><p class="small">We may have been separated by distance, but moments like these made you feel right beside me.</p></div>
+<div class="pol"><img src="assets/photo4.jpg"><p class="small">Thank you for every laugh, every conversation, and every memory we've made together.</p></div>
+<div class="pol"><img src="assets/photo5.jpg"><p class="small">I can't wait until we replace video calls with real hugs and make even more memories in person.</p></div>
+</div><button onclick="next('flowers')">Next</button></section>
+<section id="flowers"><h1>My First Gift For You 🌸</h1><div class="flower" onclick="alert('I hope this year brings you happiness, good health, and exciting adventures. ❤️')">🌼</div><div class="flower" onclick="alert('Thank you for loving me and always making me smile. ❤️')">🌷</div><div class="flower" onclick="alert('I can\'t wait until we celebrate together in Indonesia. ❤️')">🌹</div><button onclick="next('cardPage')">Next</button></section>
+<section id="cardPage"><h1>Your Digimon Inspired Partner Card</h1><div class="card"><h2>KAMERON</h2><p>Legendary Partner ★★★★★</p><hr><p>Kindness +999</p><p>Patience +999</p><p>Support +999</p><p>Love ∞</p><p><b>Special Skill:</b><br>Always Makes Astrid Smile ❤️</p></div><button onclick="next('gift2')">Next</button></section>
+<section id="gift2"><h1>Second Gift 🎁</h1><p>Your real gift isn't inside this website.</p><p>I'll give it to you when you come to Indonesia. ❤️</p><button onclick="next('ending')">Finish</button></section>
+<section id="ending"><h1>Happy Birthday Kameron ❤️</h1><p>Thank you for reading everything.</p><p>Now tell Astrid you've finished this website.</p><p>She has one more surprise waiting for you. 🥹</p></section>
 <script>
 setTimeout(()=>{loading.style.display='none';pin.style.display='flex';},2500);
 const msg="Today isn't just your birthday. It's a celebration of the most amazing person I've ever met. Thank you for always making me smile, supporting me, and loving me. Happy Birthday, Kameron. ❤️";
-function checkPin(){
- if(code.value==="0418"){pin.style.display='none';giftPage.style.display='flex';}
- else err.textContent="Wrong password ❤️";
-}
-gift.onclick=()=>{
- gift.textContent="✨";
- setTimeout(()=>{
-   giftPage.style.display='none';
-   birthday.style.display='flex';
-   let i=0;
-   let t=setInterval(()=>{typing.textContent=msg.slice(0,i++);if(i>msg.length)clearInterval(t)},25);
- },1200);
-}
-function next(id){
- document.querySelectorAll('section').forEach(s=>s.style.display='none');
- document.getElementById(id).style.display='flex';
-}
-</script>
-</body></html>
+function checkPin(){if(code.value==='0418'){pin.style.display='none';giftPage.style.display='flex';}else err.textContent='Wrong password ❤️';}
+gift.onclick=()=>{gift.textContent='✨';setTimeout(()=>{giftPage.style.display='none';birthday.style.display='flex';let i=0;let t=setInterval(()=>{typing.textContent=msg.slice(0,i++);if(i>msg.length)clearInterval(t)},25);},1200);}
+function next(id){document.querySelectorAll('section').forEach(s=>s.style.display='none');document.getElementById(id).style.display='flex';}
+</script></body></html>
